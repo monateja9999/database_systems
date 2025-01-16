@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+<Placemark><name>HOME</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2924870,34.0330935</coordinates></Point>
+</Placemark>
+<!-- Department Buildings -->
+<Folder><name>DEPARTMENT BUILDINGS</name>
+<Placemark><name>USC DENTISTRY</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2869427,34.0241073</coordinates></Point>
+</Placemark>
+<Placemark><name>USC VITERBI</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2890283,34.0207119</coordinates></Point>
+</Placemark>
+<Placemark><name>USC ROSKI</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2871169,34.0191188</coordinates></Point>
+</Placemark>
+</Folder>
+<!-- Libraries -->
+<Folder><name>LIBRARIES</name>
+<Placemark><name>HOOSE LIBRARY</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2868036,34.0187999</coordinates></Point>
+</Placemark>
+<Placemark><name>G , T LIBRARY</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2825381,34.0185941</coordinates></Point>
+</Placemark>
+<Placemark><name>DOHENEY LIBRARY</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2840341,34.0202805</coordinates></Point>
+</Placemark>
+</Folder>
+<!-- Waterworks -->
+<Folder><name>WATERWORKS</name>
+<Placemark><name>P , FS FOUNTAIN</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2853320,34.0201833</coordinates></Point>
+</Placemark>
+<Placemark><name>GEN FOUNTAIN</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2833997,34.0220001</coordinates></Point>
+</Placemark>
+<Placemark><name>FUBON FOUNTAIN</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2850309,34.0252189</coordinates></Point>
+</Placemark>
+</Folder>
+<!-- Eateries -->
+<Folder><name>EATERIES</name>
+<Placemark><name>JUBILEE CAFE</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2846898,34.0232473</coordinates></Point>
+</Placemark>
+<Placemark><name>CAFE ANNENBERG</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2873163,34.0207454</coordinates></Point>
+</Placemark>
+<Placemark><name>STARBUCKS USC</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2844248,34.0243463</coordinates></Point>
+</Placemark>
+</Folder>
+<!-- Convex Hull -->
+<Folder><name>CONVEX HULL</name>
+<Placemark>
+   <styleUrl>#solid_fill</styleUrl><Polygon>
+    <outerBoundaryIs>
+      <LinearRing>
+        <coordinates>
+          -118.282538,34.018594
+          -118.286804,34.018800
+          -118.289028,34.020712
+          -118.292487,34.033093
+          -118.285031,34.025219
+          -118.284425,34.024346
+          -118.283400,34.022000
+          -118.282538,34.018594
+        </coordinates>
+      </LinearRing>
+    </outerBoundaryIs>
+  </Polygon>
+</Placemark>
+</Folder>
+</Document></kml>

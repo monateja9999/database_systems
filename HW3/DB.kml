@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Placemark>
+    <name>HOME</name>
+    <description>PHOENIX APARTMENTS - PLACE OF RESIDENCE</description>
+    <Point>
+      <coordinates>-118.2924870,34.0330935,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>USC DENTISTRY</name>
+    <description>HERMAN OSTROW SCHOOL OF DENTISTRY OF USC - DEPARTMENT BUILDING 1</description>
+    <Point>
+      <coordinates>-118.2869427,34.0241073,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>USC VITERBI</name>
+    <description>USC VITERBI SCHOOL OF ENGINEERING - DEPARTMENT BUILDING 2</description>
+    <Point>
+      <coordinates>-118.2890283,34.0207119,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>USC ROSCKI</name>
+    <description>USC ROSCKI SCHOOL OF ART AND DESIGN - DEPARTMENT BUILDING 3</description>
+    <Point>
+      <coordinates>-118.2871169,34.0191188,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>HOOSE LIBRARY</name>
+    <description>HOOSE LIBRARY OF PHILOSOPHY - LIBRARY 1</description>
+    <Point>
+      <coordinates>-118.2868036,34.0187999,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>G , T LIBRARY</name>
+    <description>GAUGHAN AND TIBERTI LIBRARY - LIBRARY 2</description>
+    <Point>
+      <coordinates>-118.2825381,34.0185941,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>DOHENEY LIBRARY</name>
+    <description>DOHENEY MEMORIAL LIBRARY - LIBRARY 3</description>
+    <Point>
+      <coordinates>-118.2840341,34.0202805,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>P , FS FOUNTAIN</name>
+    <description>PATSY AND FORREST SHUMWAY FOUNTAIN - WATERWORKS 1</description>
+    <Point>
+      <coordinates>-118.2853320,34.0201833,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>GEN FOUNTAIN</name>
+    <description>GENERATIONS FOUNTAIN - WATERWORKS 2</description>
+    <Point>
+      <coordinates>-118.2833997,34.0220001,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>FUBON FOUNTAIN</name>
+    <description>FUBON FOUNTAIN - WATERWORKS 3</description>
+    <Point>
+      <coordinates>-118.2850309,34.0252189,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>JUBILEE CAFE</name>
+    <description>JUBILEE VEGAN CAFE - RESTAURANT/COFFEE PLACE 1</description>
+    <Point>
+      <coordinates>-118.2846898,34.0232473,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>CAFE ANNENBERG</name>
+    <description>CAFE ANNENBERG USC - RESTAURANT/COFFEE PLACE 2</description>
+    <Point>
+      <coordinates>-118.2873163,34.0207454,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>STARBUCKS USC</name>
+    <description>STARBUCKS USC VILLAGE - RESTAURANT/COFFEE PLACE 3</description>
+    <Point>
+      <coordinates>-118.2844248,34.0243463,0</coordinates>
+    </Point>
+  </Placemark>
+</kml>

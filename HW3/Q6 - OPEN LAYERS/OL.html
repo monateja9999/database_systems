@@ -1,0 +1,123 @@
+<!-- for fun, run this too:
+https://bytes.usc.edu/~saty/tools/xem/run.html?x=j-leaflet
+
+It uses a map 'web component' [web components are reusable pieces of HTML+CSS+JS].
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>OL</title>
+<script src="https://openlayers.org/api/OpenLayers.js">
+</script>
+<style>
+#map {
+    width:800px;
+    height:800px;
+}
+</style>
+</head>
+
+<body>
+<div id="map"></div>
+
+
+<script>
+// your JS code 
+// console.log("Hola, all!");
+// alert("Hello JS World!");
+
+// my data is a label/ID for what we store, which is the object stored in variable d, 
+// whose value is {"k1":[{"a":5, "b":-6}]}, which consists of a key called k1 
+// with an array as its value: [{"a":5, "b":-6}]
+// var d = {"k1":[{"a":5, "b":-6}]};
+// localStorage.setItem("myData",JSON.stringify(d));
+var coordinates = {"home":[{"a":34.0330935, "b":-118.2924870}],"departments":[{"a":34.0241073, "b":-118.2869427},{"a":34.0207119, "b":-118.2890283},{"a":34.0191188, "b":-118.2871169}],"libraries":[{"a":34.0187999, "b":-118.2868036},{"a":34.0185941, "b":-118.2825381},{"a":34.0202805, "b":-118.2840341}],"waterworks":[{"a":34.0201833, "b":-118.2853320},{"a":34.0220001, "b":-118.2833997},{"a":34.0252189, "b":-118.2850309}],"eateries":[{"a":34.0232473, "b":-118.2846898},{"a":34.0207454, "b":-118.2873163},{"a":34.0243463, "b":-118.2844248}]}
+
+localStorage.setItem("myData",JSON.stringify(coordinates));
+
+// you'd need to modify the above, to store all your points
+
+
+//next [presumably after closing the browser, and reloading our html]
+// we can fetch the stored data, just by supplying its key:
+var dataStored = JSON.parse(localStorage.getItem("myData"));
+// verify that we fetched our data correctly
+console.log(dataStored); 
+// we can iterate through our array [of points], like so:
+// var a = dataStored.k1; // a will contain our array
+// for(var indx in a) { // indx is 0,1,2...
+//   console.log(a[indx]); // this could be a single point
+// }
+
+// here's how to plot points on a map, using OpenLayers:
+// [this is code I mildly modified, from an existing source]
+function initMap() {
+        map = new OpenLayers.Map('map');
+        basemap = new OpenLayers.Layer.OSM("Simple OSM Map");
+        map.addLayer(basemap);
+        markers = new OpenLayers.Layer.Markers("Markers");
+        map.addLayer(markers);
+}// initMap()
+
+function addMarker(latitude, longitude) {
+        var lonLat = new OpenLayers.LonLat(longitude, latitude)
+            .transform(
+                new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+                map.getProjectionObject() // to Spherical Mercator Projection
+        );
+        var point = new OpenLayers.Marker(lonLat);
+        markers.addMarker(point);
+        map.setCenter(lonLat,18); // second arg is zoom level
+        //console.log(latitude + ", " + longitude);
+}// addMarker()
+
+// load and setup map layers
+initMap();
+var home = dataStored.home;
+var departments = dataStored.departments;
+var libraries = dataStored.libraries;
+var waterworks = dataStored.waterworks;
+var eateries = dataStored.eateries;
+for(var indx in home) { 
+  addMarker(home[indx].a,home[indx].b)
+}
+for(var indx in departments) { 
+
+  addMarker(departments[indx].a,departments[indx].b)
+}
+for(var indx in libraries) {
+  addMarker(libraries[indx].a,libraries[indx].b)
+}
+for(var indx in waterworks) {
+  addMarker(waterworks[indx].a,waterworks[indx].b)
+}
+for(var indx in eateries) {
+  addMarker(eateries[indx].a,eateries[indx].b)
+}
+// here's how to plot [lat,long] on the map each of them manually! 
+// addMarker(34.0330935,-118.2924870); // HOME
+// addMarker(34.0241073,-118.2869427); // HERMAN OSTROW SCHOOL OF DENTISTRY OF USC
+// addMarker(34.0207119,-118.2890283); // USC VITERBI SCHOOL OF ENGINEERING
+// addMarker(34.0191188,-118.2871169); // USC ROSKI SCHOOL OF ART AND DESIGN
+// addMarker(34.0187999,-118.2868036); // HOOSE LIBRARY OF PHILOSOPHY
+// addMarker(34.0185941,-118.2825381); // GAUGHAN & TIBERTI LIBRARY
+// addMarker(34.0202805, -118.2840341); // DOHENEY MEMORIAL LIBRARY
+// addMarker(34.0201833, -118.2853320); // PATSY AND FORREST SHUMWAY FOUNTAIN
+// addMarker(34.0220001,-118.2833997); // GENERATIONS FOUNTAIN
+// addMarker(34.0252189, -118.2850309); // FUBON FOUNTAIN
+// addMarker(34.0232473,-118.2846898); // JUBILEE VEGAN CAFE
+// addMarker(34.0207454, -118.2873163); // CAFE ANNENBERG USC
+// addMarker(34.0243463,-118.2844248); // STARBUCKS USC VILLAGE
+
+</script>
+
+</body>
+
+</html>
+
+<!--
+https://www.google.com/maps/search/usc/@34.0205363,-118.2855507,36m/data=!3m1!1e3
+-->
