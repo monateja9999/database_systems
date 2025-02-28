@@ -1,1 +1,1 @@
-# Database Systems under Prof. Saty Raghavachary
+# Database Systems
